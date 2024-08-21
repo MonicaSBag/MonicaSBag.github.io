@@ -93,4 +93,4 @@ def contact():
     return render_template("contact.html", year=current_year)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
