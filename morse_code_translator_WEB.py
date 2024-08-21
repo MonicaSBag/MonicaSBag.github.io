@@ -7,14 +7,14 @@ from dotenv import load_dotenv
 
 # App creation
 app = Flask(__name__)
-app.config["Secret Key"] = os.getenv("SECRET_KEY").strip("[]")
+app.config["Secret Key"] = os.getenv("SECRET_KEY")
 Bootstrap(app)
 # Data showing in the footer
 current_year = datetime.datetime.today().year
 # Data for the email for the contact page
 load_dotenv() 
-app_pass = os.getenv("APP_PASS").strip("[]")
-email_studio = os.getenv("EMAIL_STUDIO").strip("[]")
+app_pass = os.getenv("APP_PASS")
+email_studio = os.getenv("EMAIL_STUDIO")
 
 def send_emails(body):
      subject = "Morse Code Contact Info!"
